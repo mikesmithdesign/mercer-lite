@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+  Joel Mercer Lite : free one-page developer portfolio template.
+  Free for personal and commercial use. Attribution appreciated.
+  Full version (multi-page, command palette, generated case studies, JSON
+  config, four colour packs, Astro): see README.md.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joel Mercer Lite : free developer portfolio template</title>
+<meta name="description" content="Joel Mercer Lite is a free one-page HTML template for developer and product-engineer portfolios. Dark, brutalist, mono-voiced. Full Astro version available.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Chakra+Petch:wght@700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="who">Joel Mercer</span>
+    <a class="mailto" href="mailto:hello@joelmercer.dev">hello@joelmercer.dev</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Software for the slow&nbsp;parts<span class="stop">.</span></h1>
+    <p class="h-sub">I'm Joel Mercer, a product engineer in Manchester. I replace hand-cranked bookings, payroll, quoting and ordering with software people&nbsp;trust.</p>
+    <div class="h-cta">
+      <a class="btn" href="#projects">See the work &rarr;</a>
+    </div>
+  </div>
+  <div class="h-foot">
+    <div class="wrap">
+      <span><i class="dot" aria-hidden="true"></i>booking autumn 2026</span>
+      <span>manchester, working uk-wide</span>
+    </div>
+  </div>
+</section>
+
+<div class="names">
+  <div class="wrap">
+    <p>ten years of shipping</p>
+    <p>previously <b>Halyard</b> + <b>Pilcrow</b></p>
+    <p>now independent, one project at a time</p>
+  </div>
+</div>
+
+<section class="entries" id="projects">
+  <div class="wrap">
+    <h2>The projects<span class="stop">.</span></h2>
+    <div class="workgrid">
+      <article class="proj reveal">
+        <div class="shot"><img src="img/dev-macbook-desk.jpg" alt="Placeholder photo: a MacBook on a desk with code on screen" width="2000" height="1250"></div>
+        <div class="p-cap">
+          <h3>Halyard</h3>
+          <p>Every booking started with a call, because the web form was long enough that the sales team apologised for it.</p>
+          <p class="p-outcome">Most customers now quote and book on their own. The sales team spends its calls on the shipments that need a&nbsp;human.</p>
+          <div class="p-meta"><span><b>freight software</b></span><span>sole engineer</span><span>rails, postgres, hotwire</span><span>2023</span></div>
+        </div>
+      </article>
+      <article class="proj reveal r2">
+        <div class="shot"><img src="img/dev-imac-desk.jpg" alt="Placeholder photo: an iMac on a desk showing a software dashboard" width="2000" height="1250" loading="lazy"></div>
+        <div class="p-cap">
+          <h3>Sable &amp; Rowe</h3>
+          <p>Payroll month, without the spreadsheets: a checklist with a database behind it, for an eleven-person accountancy&nbsp;practice.</p>
+          <p class="p-outcome">The run that used to fill a day now fits in a morning, and a new starter can be trusted with it in their first&nbsp;week.</p>
+          <div class="p-meta"><span><b>accountants</b></span><span>design and build</span><span>django, postgres, htmx</span><span>2024</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="kind">
+  <div class="wrap">
+    <figure>
+      <blockquote>&ldquo;Joel sat with our payroll team for two days before he wrote a line of code. The tool works the way we actually&nbsp;work.&rdquo;</blockquote>
+      <figcaption>Alice Rowe, partner, Sable &amp; Rowe</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="booking" id="contact">
+  <div class="wrap">
+    <p class="avail"><span class="dot"></span>currently booking : autumn 2026</p>
+    <h2>One project at a time. Yours&nbsp;next?</h2>
+    <p>I take a single engagement so it gets my full attention. If autumn works for you, get in&nbsp;early.</p>
+    <a class="bigmail" href="mailto:hello@joelmercer.dev">hello@joelmercer.dev</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-line">
+      <span class="fbrand">Joel Mercer</span>
+      <span>product engineer / manchester, uk</span>
+      <a href="mailto:hello@joelmercer.dev">hello@joelmercer.dev</a>
+      <a href="https://github.com" rel="noopener">GitHub</a>
+      <span>&copy; joel mercer 2026</span>
+    </div>
+    <p class="foot-disc">A fictional portfolio. Free demo template by Mike Smith Design. Photography is placeholder, replace for production.</p>
+  </div>
+</footer>
+
+<script src="lenis.min.js"></script>
+<script>
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!REDUCED && window.Lenis) {
+  const lenis = new Lenis({ lerp: .09 });
+  (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })();
+}
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth' });
+}));
+
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: .16 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+if (REDUCED) document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+</script>
+</body>
+</html>
