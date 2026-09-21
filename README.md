@@ -1,4 +1,4 @@
-# Joel Mercer Lite : free one-page template for developer portfolios
+# Rowan Mercer Lite : free one-page template for developer portfolios
 
 A single-file HTML template with a dark, brutalist register: giant
 sentence-case display type, lowercase monospace as the system voice, heavy

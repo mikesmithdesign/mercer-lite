@@ -1,4 +1,4 @@
-# Image credits : Joel Mercer Lite
+# Image credits : Rowan Mercer Lite
 
 Stock photography of devices showing software or code, Unsplash placeholders,
 fetched from the Unsplash CDN at the size below, q80, entropy crop. Flagged
