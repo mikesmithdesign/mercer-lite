@@ -36,4 +36,4 @@ project data, a validated contact form, four colour packs, and JSON-driven
 content (rebrand the whole site from one data folder), built as an Astro 7
 project.
 
-→ https://mikesmithdesign.gumroad.com/l/mercer-astro-theme (£20)
+→ [Mercer, the full Astro theme for developer portfolios](https://mikesmithdesign.co.uk/themes/mercer) (£20)
